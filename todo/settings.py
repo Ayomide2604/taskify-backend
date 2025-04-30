@@ -28,6 +28,10 @@ INSTALLED_APPS = [
 
     # Project Apps
     'accounts',
+    'task',
+
+    # 3rd Party Apps
+    'rest_framework',
 ]
 
 MIDDLEWARE = [

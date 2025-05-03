@@ -7,8 +7,11 @@ User = get_user_model()
 
 
 class Task(models.Model):
-    task = models.CharField(max_length=200, null=True, blank=True)
+    task = models.CharField(max_length=200)
     is_completed = models.BooleanField(default=False)
     user = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name='tasks')
     created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.task
